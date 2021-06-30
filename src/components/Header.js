@@ -1,10 +1,15 @@
 import PropTypes from 'prop-types'
+import Button from './Button'
 
 const Header = ({ title }) => {
+  const clickMessage = (e) => {
+      console.log('Hello')
+  }
+  
   return (
-    <div>
-        <h1>Task Tracker</h1>
-        <p>{title}</p>
+    <div className='header'>
+        <h1>{title}</h1>
+        <Button color='green' text='Add' onClick={clickMessage}/>
     </div>
   )
 }
